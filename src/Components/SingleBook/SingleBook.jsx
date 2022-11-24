@@ -1,5 +1,7 @@
 import { Card } from "react-bootstrap";
 import "./single-book.css";
+import "../CommentArea/CommentArea";
+import CommentArea from "../CommentArea/CommentArea";
 // import fantasyBook from "../../Data/books/fantasy.json";
 
 const SingleBook = ({ book }) => {
@@ -8,6 +10,7 @@ const SingleBook = ({ book }) => {
       <Card.Img variant="top" src={book.img} alt={book.title} />
       <Card.Body>
         <Card.Title class="red-text">{book.title}</Card.Title>
+        <CommentArea bookId={book.asin} />
       </Card.Body>
     </Card>
   );

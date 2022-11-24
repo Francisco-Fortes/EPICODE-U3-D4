@@ -5,7 +5,7 @@ const BookList = ({ books }) => {
   return (
     <Container>
       <Row className="justify-content-center">
-        {books.map((book) => {
+        {books.slice(0, 3).map((book) => {
           return <SingleBook book={book} />;
         })}
       </Row>
